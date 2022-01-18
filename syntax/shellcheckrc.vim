@@ -14,7 +14,7 @@ syntax match shellcheckrcAssign /\i\+\zs=\ze\i*/ contained
 
 " disable, enable {{{
 syntax match shellcheckrcDirective /\<\%(disable\|enable\)\ze=/ nextgroup=shellcheckrcAssignDisableEnable
-syntax region shellcheckrcAssignDisableEnable start=/=/ end='$' contains=shellcheckrcCheck,shellcheckrcCheckSeparator,shellcheckrcEnum,shellcheckrcOptional,shellcheckrcComment contained
+syntax region shellcheckrcAssignDisableEnable start=/=\ze\S/ end='$' contains=shellcheckrcCheck,shellcheckrcCheckSeparator,shellcheckrcEnum,shellcheckrcOptional,shellcheckrcComment contained
 
 syntax match shellcheckrcCheck /\<SC[1-9]\d\{3}\>/ contained
 syntax match shellcheckrcCheckSeparator /,\|-/ contained
@@ -24,21 +24,21 @@ syntax match shellcheckrcOptional /\<add-default-case\|avoid-nullary-conditions\
 
 " external-sources {{{
 syntax match shellcheckrcDirective /\<external-sources\>\ze=/ nextgroup=shellcheckrcAssignExternalSources
-syntax region shellcheckrcAssignExternalSources start=/=/ end=/$/ contains=shellcheckrcBoolean,shellcheckrcComment contained
+syntax region shellcheckrcAssignExternalSources start=/=\ze\S/ end=/$/ contains=shellcheckrcBoolean,shellcheckrcComment contained
 
 syntax keyword shellcheckrcBoolean true false contained
 " }}}
 
 " source, source-path {{{
 syntax match shellcheckrcDirective /\<\%(source\|source-path\)\ze=/ nextgroup=shellcheckrcAssignSourcePath
-syntax region shellcheckrcAssignSourcePath start=/=/ end=/$/ contains=shellcheckrcPath,shellcheckrcComment contained
+syntax region shellcheckrcAssignSourcePath start=/=\ze\S/ end=/$/ contains=shellcheckrcPath,shellcheckrcComment contained
 
 syntax match shellcheckrcPath /\<\%([^[:space:]#]\|\\\s\|\\#\)\+/ contained
 " }}}
 
 " shell {{{
 syntax match shellcheckrcDirective /\<shell\ze=/ nextgroup=shellcheckrcAssignShell
-syntax region shellcheckrcAssignShell start=/=/ end=/$/ contains=shellcheckrcSh,shellcheckrcComment contained
+syntax region shellcheckrcAssignShell start=/=\ze\S/ end=/$/ contains=shellcheckrcSh,shellcheckrcComment contained
 
 syntax keyword shellcheckrcSh sh bash dash ksh contained
 " }}}
