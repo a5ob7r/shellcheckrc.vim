@@ -1,0 +1,38 @@
+#
+# A sample shellcheckrc.
+#
+
+# Annotation comments.
+# TODO:
+# FIXME:
+# XXX:
+# NB:
+# NOTE:
+
+disable=SC2236 # Disable `Use -n instead of ! -z`.
+# Disable multiple checks using one directive.
+disable=SC1000,SC1001,SC1002
+# Disable multiple checks using range.
+disable=SC1000-SC9999
+
+enable=all # Enable all optional checks.
+enable=add-default-case
+enable=avoid-nullary-conditions
+enable=check-extra-masked-returns
+enable=check-set-e-suppressed
+enable=check-unassigned-uppercase
+enable=deprecate-which
+enable=quote-safe-variables
+enable=require-double-brackets
+enable=require-variable-braces
+
+external-sources=true
+external-sources=false
+
+source=src/examples/config.sh
+source-path=src/examples
+
+shell=sh
+shell=dash
+shell=bash
+shell=ksh
