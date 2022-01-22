@@ -10,6 +10,7 @@
 # NOTE:
 
 disable=SC2236 # Disable `Use -n instead of ! -z`.
+disable=2236 # No prefix version.
 # Disable multiple checks using one directive.
 disable=SC1000,SC1001,SC1002
 # Disable multiple checks using range.

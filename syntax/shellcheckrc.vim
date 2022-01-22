@@ -16,7 +16,7 @@ syntax match shellcheckrcAssign /\i\+\zs=\ze\i*/ contained
 syntax match shellcheckrcDirective /\<\%(disable\|enable\)\ze=/ nextgroup=shellcheckrcAssignDisableEnable
 syntax region shellcheckrcAssignDisableEnable start=/=\ze\S/ end='$' contains=shellcheckrcCheck,shellcheckrcCheckSeparator,shellcheckrcEnum,shellcheckrcOptional,shellcheckrcComment contained
 
-syntax match shellcheckrcCheck /\<SC[1-9]\d\{3}\>/ contained
+syntax match shellcheckrcCheck /\<\%(SC\)\=[1-9]\d\{3}\>/ contained
 syntax match shellcheckrcCheckSeparator /,\|-/ contained
 syntax keyword shellcheckrcEnum all contained
 syntax match shellcheckrcOptional /\<add-default-case\|avoid-nullary-conditions\|check-extra-masked-returns\|check-set-e-suppressed\|check-unassigned-uppercase\|deprecate-which\|quote-safe-variables\|require-double-brackets\|require-variable-braces\>/ contained
