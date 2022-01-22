@@ -4,9 +4,9 @@ A vim filetype plugin for shellcheckrc, which is a configuration file for [Shell
 
 ## Features
 
-- filetype detection
-- syntax highlighting
-- comment string
+- Filetype detection
+- Syntax highlighting
+- Shellcheck directive highlighting in shell script (disabled by default)
 
 ## Installation
 

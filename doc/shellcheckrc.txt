@@ -1,0 +1,24 @@
+*ft_shellcheckrc.txt* Filetype plugin for shellcheckrc
+
+==============================================================================
+INTRODUCTION
+
+This plugin provides filetype detection, syntax highlighting and misc for
+shellcheckrc, which is a configuration file for
+ShellCheck(https://github.com/koalaman/shellcheck).
+
+==============================================================================
+OPTIONS                                                 *shellcheckrc-options*
+
+                                            *g:shellcheck_directive_highlight*
+                                            *b:shellcheck_directive_highlight*
+g:shellcheck_directive_highlight~
+b:shellcheck_directive_highlight~
+	Whether or not to highlight ShellCheck directive in shell script.
+	Default global value is 0.
+>
+	let g:shellcheck_directive_highlight = 1
+<
+
+==============================================================================
+vim:tw=78:ts=8:noet:ft=help:norl:
